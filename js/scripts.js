@@ -8,7 +8,11 @@ var pigLatin = function(word) {
       return  word + "way"
     }
   }
-
+  if (word.toLowerCase().startsWith("qu")){
+    var firstTwoLetters = word.slice(0,2);
+    var newWord1 = word.slice(2) + firstTwoLetters + "ay";
+    return newWord1;
+  } 
 
 
 };
