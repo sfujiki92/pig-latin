@@ -3,11 +3,14 @@
 var vowels = ["a","e","i","o","u"];
 
 var pigLatin = function(word) {
-  if (word.startsWith(vowels)) {
-    return "test";//+ "way"
-  } else {
-    return "No";
- }
+  for(var i = 0; i < vowels.length; i++){
+    if (word.toLowerCase().startsWith(vowels[i])) {
+      return  word + "way"
+    }
+  }
+
+
+
 };
 
 
@@ -20,20 +23,6 @@ $(document).ready(function() {
     var word = $("input#word").val();
     var result = pigLatin(word);
 
-
-
-  //  $(".word").text(word);
-
-  //  if (!result) {          //same as writing if (result === false)
-//      $(".not").text("not");
-//   } else {
-//      $(".not").text("");
-//    }
-
     $("#output").text(result);
-
-
   });
-
-
 });
