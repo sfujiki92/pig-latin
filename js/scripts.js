@@ -12,7 +12,11 @@ var pigLatin = function(word) {
     var firstTwoLetters = word.slice(0,2);
     var newWord1 = word.slice(2) + firstTwoLetters + "ay";
     return newWord1;
-  } 
+  } else {
+    var firstLetter = word.slice(0, 1);
+    var newWord = word.slice(1) + firstLetter + "ay";
+    return newWord;
+  }
 
 
 };
